@@ -1,0 +1,20 @@
+<package format="2">
+  <name>ads</name>
+  <version>1.2.4</version>
+  <description>
+  Beckhoff ADS found here: github.com/Beckhoff/ADS
+  </description>
+  <maintainer email="noemailfound@gmail.com">Patrick Brunn</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  
+</package>
