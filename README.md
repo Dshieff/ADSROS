@@ -19,7 +19,7 @@ Ubuntu 18.04 LTS | win32 | gcc 5.5.0
 Windows 10       | win64 | gcc 8.3.0
 
 
-Prepare your target to run the example
+Prepare your target to run the example:
 ======================================
 - Download your PLC project to your target e.g. "PLC-TestProject" of our GitHub repository.
 - Authorise your ADS client for the TwinCAT target by adding an AMS route.
@@ -54,43 +54,42 @@ Prepare your client to run the ads library
 - set your client to a static ip address with something like:
 192.168.0.1 subnet mask: 255.255.255.0
 
-compile & usage
-===============
+- make a catkin directory (http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
 
-#make catkin directory (http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
-
-#git clone the ads repo into the src folder of catkin workspace:
+- git clone the ads repo into the src folder of catkin workspace:
 git clone https://github.com/Beckhoff/ADS.git <directory>
 
-#get python 3 (https://docs.python-guide.org/starting/install3/linux/)
+- get python 3 (https://docs.python-guide.org/starting/install3/linux/)
 
-#navigate into the catkin directory
+- navigate into the catkin directory
 
-#build the ads package (the version of python is 3.10, can be different)
+- build the ads package (the version of python is 3.10, can be different)
 catkin build <package name> -DPYTHON_EXECUTABLE=/usr/bin/python3 
 -DPYTHON_INCLUDE_DIR=/usr/local/include/python3.10
 
-#If there is a weird error and catkin does not build try this:
+- If there is a weird error and catkin does not build try this:
 catkin clean
 
-#Once the package is built, source the files so that the packages in the workspace recognisable to the rest of the system
+- Once the package is built, source the files so that the packages in the workspace recognisable to the rest of the system
 source ~/catkin_ws/devel/setup.bash
 
-#get ros to run:
+- get ros to run:
 source /opt/ros/noetic/setup.bash
 roscore
 
-#find the ROS package, make sure that ROS replies witht the file path of the ads library:
+- find the ROS package, make sure that ROS replies witht the file path of the ads library:
 rospack find ads
 
-#to test this library build and run the example node (the example.cpp file adapted for ROS) or the rw_usbcam node
+- to test this library build, modify and run (using rosrun) the example folder as a separate node (the example.cpp file adapted for ROS)
+	- set "remoteNetId" and "remoteIpV4" and enable bhf::ads::SetLocalAddress() in "example/example.cpp" according to 	your own setup
+	- rosrun example example
 
-#set "remoteNetId" and "remoteIpV4" and enable bhf::ads::SetLocalAddress() in "example/example.cpp" according to your own setup
 
-#general gude on ADS/AMS Specification: https://infosys.beckhoff.com/content/1033/tc3_ads_intro/index.html
+- more info on ADS/AMS Specification found here: https://infosys.beckhoff.com/content/1033/tc3_ads_intro/index.html
 
 List of modifications made:
-======================================
+===========================
+
 filepath:
 AdsLib to include/AdsLib
 
