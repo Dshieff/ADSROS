@@ -5,18 +5,12 @@ This library is intended to provide easy use as ADS client applications running 
 
 To build this library a recent compiler with C++14 support is required. 
 
-Currently (2022-02-21) tested with:
+Currently (2022-08-09) tested with:
 ===================================
 
 host (amd64)     | target| compiler
 -----------------|-------|-------------
-TC/BSD 12        | amd64 | clang 10.0.1
-Debian Bullseye  | amd64 | clang 11.0.1
-Debian Bullseye  | amd64 | gcc 10.2.1
-Debian Bullseye  | i686  | gcc 10.2.1
-Debian Bullseye  | mips  | gcc 10.2.1
-Ubuntu 18.04 LTS | win32 | gcc 5.5.0
-Windows 10       | win64 | gcc 8.3.0
+Windows 10       | win64 | gcc 9.4.0
 
 
 Prepare your target to run the example:
