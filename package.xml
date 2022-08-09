@@ -1,5 +1,5 @@
 <package format="2">
-  <name>BeckhoffADSROS</name>
+  <name>ADSROS</name>
   <version>1.0.0</version>
   <description>
   Original Beckhoff ADS found here: github.com/Beckhoff/ADS
