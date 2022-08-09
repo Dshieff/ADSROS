@@ -1,10 +1,10 @@
 <package format="2">
-  <name>ads</name>
-  <version>1.2.4</version>
+  <name>BeckhoffADSROS</name>
+  <version>1.0.0</version>
   <description>
-  Beckhoff ADS found here: github.com/Beckhoff/ADS
+  Original Beckhoff ADS found here: github.com/Beckhoff/ADS
   </description>
-  <maintainer email="noemailfound@gmail.com">Patrick Brunn</maintainer>
+  <maintainer email="noemailfound@gmail.com">Dshieff</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>catkin</buildtool_depend>
