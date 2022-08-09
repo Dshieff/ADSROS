@@ -51,7 +51,7 @@ Prepare your client to run the ads library
 - make a catkin directory (http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
 
 - git clone the ads repo into the src folder of catkin workspace:
-git clone https://github.com/Beckhoff/ADS.git <directory>
+git clone https://github.com/Dshieff/BeckhoffADSROS.git <directory>
 
 - get python 3 (https://docs.python-guide.org/starting/install3/linux/)
 
@@ -75,7 +75,7 @@ roscore
 rospack find ads
 
 - to test this library build, modify and run (using rosrun) the example folder as a separate node (the example.cpp file adapted for ROS)
-	- set "remoteNetId" and "remoteIpV4" and enable bhf::ads::SetLocalAddress() in "example/example.cpp" according to 	your own setup
+	- set "remoteNetId" and "remoteIpV4" and enable bhf::ads::SetLocalAddress() in "example/example.cpp" according to your own setup
 	- rosrun example example
 
 
