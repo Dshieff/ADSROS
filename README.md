@@ -1,4 +1,4 @@
-# BeckhoffADSROS
+# ADSROS
 ROS node adaptation of the Beckhoff/ADS library
 
 This library is intended to provide easy use as ADS client applications running on non-windows systems (e.g. FreeBSD, Linux, ...) to communicate with TwinCAT devices via TCP/IP. This is a modification of the Beckhoff/ADS library so that it can be used with ROS (https://github.com/Beckhoff/ADS.git). Modifications made are found at the bottom of the READ ME.
