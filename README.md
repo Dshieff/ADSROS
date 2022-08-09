@@ -114,8 +114,6 @@ include_directories(
 
 replaced add_subdirectory commands to:
 add_subdirectory(include/AdsLib)
-add_subdirectory(AdsLibTest)
-add_subdirectory(example)
 
 added after the add_subdirectory commands:
 #Catkin edits, need to install the target to Catkin as well as all of the header files inside include, special command is used to only detect the .h files (install step)
