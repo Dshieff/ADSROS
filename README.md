@@ -87,27 +87,26 @@ rospack find ads
 
 - more info on ADS/AMS Specification found here: https://infosys.beckhoff.com/content/1033/tc3_ads_intro/index.html
 
-List of modifications made:
-===========================
+# List of modifications made:
 
-filepath:
+- filepath:
 AdsLib to include/AdsLib
 
-Package file:
+- Package file:
 added a package.xml file to allow catkin to build
-CMakeLists.txt file inside ads:
+	
+- CMakeLists.txt file inside ads:
 added after find_package(Threads):
-# Added to enable catkin to build this package (locate catkin step)
+Added to enable catkin to build this package (locate catkin step)
 find_package(catkin REQUIRED)
 
-# The catkin_package macro generates cmake config files for your package (config step)
+#The catkin_package macro generates cmake config files for your package (config step)
 catkin_package(
    INCLUDE_DIRS include
    LIBRARIES ${PROJECT_NAME}
    )
    
-
-# set the include directory, needs to be called include (config step)
+#set the include directory, needs to be called include (config step)
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
@@ -119,7 +118,7 @@ add_subdirectory(AdsLibTest)
 add_subdirectory(example)
 
 added after the add_subdirectory commands:
-# Catkin edits, need to install the target to Catkin as well as all of the header files inside include, special command is used to only detect the .h files (install step)
+#Catkin edits, need to install the target to Catkin as well as all of the header files inside include, special command is used to only detect the .h files (install step)
 install(
 	TARGETS ${PROJECT_NAME}
 	ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
@@ -132,6 +131,6 @@ install (DIRECTORY include/AdsLib/
 	FILES_MATCHING PATTERN "*.h"
 )
 
-CMakeLists.txt file inside ads/include/AdsLib:
-# added this for catkin so that catkin libraries are linked to the target (linking step)
+- CMakeLists.txt file inside ads/include/AdsLib:
+added this for catkin so that catkin libraries are linked to the target (linking step)
 target_link_libraries(ads PUBLIC ${catkin_LIBRARIES})
