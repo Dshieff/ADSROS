@@ -58,8 +58,10 @@ git clone https://github.com/Dshieff/ADSROS.git <directory>
 - navigate into the catkin directory
 
 - build the ads package (the version of python is 3.10, can be different)
+catkin build
+or if that does not work:
 catkin build <package name> -DPYTHON_EXECUTABLE=/usr/bin/python3 
--DPYTHON_INCLUDE_DIR=/usr/local/include/python3.10
+-DPYTHON_INCLUDE_DIR=/usr/local/include/python3.10 
 
 - If there is a weird error and catkin does not build try this:
 catkin clean
@@ -75,7 +77,9 @@ roscore
 rospack find ads
 
 - to test this library build, modify and run (using rosrun) the example folder as a separate node (the example.cpp file adapted for ROS)
+	- copy example from ADSROS to src folder: cp -R ADSROS/example example
 	- set "remoteNetId" and "remoteIpV4" and enable bhf::ads::SetLocalAddress() in "example/example.cpp" according to your own setup
+	- run catkin build and source the files
 	- rosrun example example
 
 
