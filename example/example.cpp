@@ -140,25 +140,20 @@ static void readStateExample(std::ostream& out, const AdsDevice& route)
 
 static void runExample(std::ostream& out)
 {
-    //static const AmsNetId remoteNetId { 192, 168, 0, 231, 1, 1 };
-    //static const AmsNetId remoteNetId { 10, 199, 109, 140, 1, 1 };
-    static const AmsNetId remoteNetId { 5, 108, 230, 0, 1, 1 };
-    //static const char remoteIpV4[] = "ads-server";
-    static const char remoteIpV4[] = "192.168.1.2";
+    static const AmsNetId remoteNetId { 10, 199, 109, 140, 1, 1 };
+    static const char remoteIpV4[] = "ads-server";
 
     // uncomment and adjust if automatic AmsNetId deduction is not working as expected
     //bhf::ads::SetLocalAddress({192, 168, 0, 1, 1, 1});
-    bhf::ads::SetLocalAddress({192, 168, 1, 1, 1, 1});
-
 
     AdsDevice route {remoteIpV4, remoteNetId, AMSPORT_R0_PLC_TC3};
-    //notificationExample(out, route);
-    //notificationByNameExample(out, route);
-    //readExample(out, route);
-    //readByNameExample(out, route);
-    //readWriteExample(out, route);
-    //readWriteArrayExample(out, route);
-    //readStateExample(out, route);
+    notificationExample(out, route);
+    notificationByNameExample(out, route);
+    readExample(out, route);
+    readByNameExample(out, route);
+    readWriteExample(out, route);
+    readWriteArrayExample(out, route);
+    readStateExample(out, route);
     testADSExample(out, route);
 }
 
