@@ -51,7 +51,7 @@ Prepare your client to run the ads library
 - make a catkin directory (http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
 
 - git clone the ads repo into the src folder of catkin workspace:
-git clone https://github.com/Dshieff/BeckhoffADSROS.git <directory>
+git clone https://github.com/Dshieff/ADSROS.git <directory>
 
 - get python 3 (https://docs.python-guide.org/starting/install3/linux/)
 
