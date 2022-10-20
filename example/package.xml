@@ -17,6 +17,6 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   
-  <depend>ADSROS</depend>
+  <depend>adsros</depend>
   
 </package>
