@@ -7,13 +7,13 @@ set(SOURCES
 )
 
 #-- catkin stuff
-find_package(catkin REQUIRED roscpp std_msgs ADSROS)
+find_package(catkin REQUIRED roscpp std_msgs adsros)
 
 catkin_package(
    LIBRARIES ${PROJECT_NAME}
    CATKIN_DEPENDS roscpp std_msgs
    message_runtime
-   ADSROS
+   adsros
    )
    
 include_directories(
