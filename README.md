@@ -71,9 +71,10 @@ source ~/catkin_ws/devel/setup.bash
 
 - get ros to run:
 source /opt/ros/noetic/setup.bash
-roscore
 
-- find the ROS package, make sure that ROS replies witht the file path of the ads library:
+-note: these source commands can also be added to ~/.bashrc to avoid re-entering them on startup
+
+- find the ROS package, make sure that ROS replies witht the file path of the ads library (remember to run roscore first!):
 rospack find ads
 
 - to test this library build, modify and run (using rosrun) the example folder as a separate node (the example.cpp file adapted for ROS)
